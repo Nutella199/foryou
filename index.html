@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7e8e4" />
+    <meta
+      name="description"
+      content="A small, heartfelt letter made for someone special."
+    />
+    <title>A little something for you ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&family=Montserrat:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="glow glow-one" aria-hidden="true"></div>
+    <div class="glow glow-two" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Return to the beginning">
+        <span class="brand-mark">♡</span>
+        <span>just for you</span>
+      </a>
+      <div class="sound-wrap">
+        <span class="sound-label">soft sounds</span>
+        <button class="sound-toggle" type="button" aria-label="Turn soft sounds on" aria-pressed="false">
+          <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="scene is-active" data-scene="hello" aria-labelledby="hello-title">
+        <div class="eyebrow"><span></span>A quiet little corner of the internet</div>
+        <div class="hero-copy">
+          <p class="hello">Hey, <span data-recipient>you</span>.</p>
+          <h1 id="hello-title">I made you<br /><em>something small.</em></h1>
+          <p class="intro">
+            Not to make things complicated. Just to put a few honest words somewhere beautiful.
+          </p>
+          <button class="button button-primary" type="button" data-go="question">
+            <span>See what it is</span><span class="arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="orbit-art" aria-hidden="true">
+          <div class="orbit orbit-outer"><span class="star star-one">✦</span></div>
+          <div class="orbit orbit-inner"><span class="star star-two">✦</span></div>
+          <div class="heart-core"><span>♡</span><small>for you</small></div>
+        </div>
+        <p class="scroll-note">made with a slightly nervous heart</p>
+      </section>
+
+      <section class="scene scene-centered" data-scene="question" aria-labelledby="question-title" hidden>
+        <div class="question-card">
+          <span class="tiny-heart" aria-hidden="true">♡</span>
+          <p class="kicker">Before we begin</p>
+          <h2 id="question-title">Can I tell you<br /><em>something honest?</em></h2>
+          <p class="supporting-copy">No pressure, no expectations. Just a little truth from me to you.</p>
+          <div class="button-row">
+            <button class="button button-primary" type="button" data-go="truths">
+              Yes, I’m listening <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="button button-quiet" type="button" data-go="pause">Maybe another time</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-centered" data-scene="pause" aria-labelledby="pause-title" hidden>
+        <div class="question-card compact-card">
+          <span class="tiny-heart" aria-hidden="true">☁</span>
+          <p class="kicker">That’s completely okay</p>
+          <h2 id="pause-title">This little page<br /><em>isn’t going anywhere.</em></h2>
+          <p class="supporting-copy">Come back whenever it feels right. Your comfort matters more than my curiosity.</p>
+          <button class="button button-quiet" type="button" data-go="question">Actually, I’m ready</button>
+        </div>
+      </section>
+
+      <section class="scene truths-scene" data-scene="truths" aria-labelledby="truths-title" hidden>
+        <div class="truths-heading">
+          <p class="kicker">A small prelude</p>
+          <h2 id="truths-title">Three little truths<br /><em>before the big one.</em></h2>
+          <p>Tap each one gently.</p>
+        </div>
+
+        <div class="truth-grid">
+          <button class="truth-card" type="button" data-truth="1" aria-expanded="false">
+            <span class="truth-number">01</span>
+            <span class="truth-prompt">the ordinary</span>
+            <span class="truth-message">You have a way of making ordinary moments feel worth remembering.</span>
+            <span class="truth-icon" aria-hidden="true">✦</span>
+          </button>
+          <button class="truth-card" type="button" data-truth="2" aria-expanded="false">
+            <span class="truth-number">02</span>
+            <span class="truth-prompt">the feeling</span>
+            <span class="truth-message">Somewhere along the way, you became someone I genuinely look forward to.</span>
+            <span class="truth-icon" aria-hidden="true">☼</span>
+          </button>
+          <button class="truth-card" type="button" data-truth="3" aria-expanded="false">
+            <span class="truth-number">03</span>
+            <span class="truth-prompt">the courage</span>
+            <span class="truth-message">And some feelings deserve a little courage, even when my heart is racing.</span>
+            <span class="truth-icon" aria-hidden="true">♡</span>
+          </button>
+        </div>
+
+        <div class="unlock-wrap">
+          <p class="unlock-status" aria-live="polite">Open all three little truths to continue</p>
+          <button class="button button-primary unlock-button" type="button" data-go="letter" disabled>
+            Open my letter <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="scene letter-scene" data-scene="letter" aria-labelledby="letter-title" hidden>
+        <div class="letter-intro" data-letter-intro>
+          <p class="kicker">One last thing</p>
+          <h2 id="letter-title">This is the part<br /><em>I was nervous about.</em></h2>
+          <div class="envelope-wrap">
+            <button class="envelope" type="button" aria-label="Unseal and read the letter" data-open-letter>
+              <span class="envelope-back"></span>
+              <span class="envelope-paper"><span>for <b data-recipient>you</b></span></span>
+              <span class="envelope-front"></span>
+              <span class="envelope-seal">♡</span>
+            </button>
+          </div>
+          <p class="tap-note">tap the letter to unseal it</p>
+        </div>
+
+        <article class="confession" data-confession hidden>
+          <div class="letter-topline">
+            <span>an honest letter</span><span>♡</span>
+          </div>
+          <p class="salutation">Dear <span data-recipient>you</span>,</p>
+          <div class="confession-copy" data-confession-copy></div>
+          <p class="signature">With a hopeful heart,<br /><em data-sender>me</em></p>
+          <div class="letter-footer">
+            <span>Whatever your answer, thank you for reading.</span>
+            <button class="icon-button" type="button" data-restart aria-label="Experience this page again">↻</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="progress-dots" aria-hidden="true">
+      <span class="is-current"></span><span></span><span></span><span></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
